@@ -3,6 +3,7 @@ import { useDropzone } from 'react-dropzone'
 import { Card, Typography, Button } from 'antd'
 
 const { Title } = Typography
+const buttonStyle = { backgroundColor: 'hotpink', border: '2px solid hotpink' }
 
 const DropImageCard = ({ setFile, canvasRef, fileLoaded }) => {
   const onDrop = useCallback(
@@ -24,7 +25,13 @@ const DropImageCard = ({ setFile, canvasRef, fileLoaded }) => {
   return (
     <Card
       {...getRootProps()}
-      extra={fileLoaded && <Button size={'small'}>add image</Button>}
+      extra={
+        fileLoaded && (
+          <Button type={'primary'} size={'small'} style={buttonStyle}>
+            add image
+          </Button>
+        )
+      }
       title={
         <Title style={{ color: 'grey' }} level={3} strong>
           Pupper Identifier 🐶
