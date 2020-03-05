@@ -41,7 +41,6 @@ export default function Predictions({ output }) {
           <br />
         </div>
       ))}
-      <Button>identify another pupper</Button>
     </>
   )
 }

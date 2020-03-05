@@ -21,6 +21,10 @@ const Classifier = () => {
     setIsLoading(false)
   }
 
+  useEffect(() => {
+    if (!loaded && !isLoading) startLoadModel()
+  }, [])
+
   const [file, setFile] = useState(null)
   const canvas = useRef(null)
   const [data, setData] = useState(null)
@@ -40,13 +44,13 @@ const Classifier = () => {
   return (
     <div>
       <Card>
-        <DropImageCard setFile={setFile} canvasRef={canvas} fileLoaded={loaded && !data} />
+        <DropImageCard setFile={setFile} canvasRef={canvas} fileLoaded={loaded} />
         <div style={{ marginTop: 20 }}>
-          {!loaded && !isLoading && (
+          {/* {!loaded && !isLoading && (
             <Button type={'primary'} style={buttonStyle} onClick={startLoadModel}>
               Load model
             </Button>
-          )}
+          )} */}
           {!loaded && isLoading && <Spin />}
           {loaded && data && !outputMap && <Text>Running model...</Text>}
           {!!file && !data && <Text>Loading image...</Text>}
