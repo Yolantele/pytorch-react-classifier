@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './classes'
 import { getBreedImg, getBreed } from './utils'
-import { Typography } from 'antd'
+import { Typography, Button } from 'antd'
 
 const { Text, Title } = Typography
 const getTopK = (acts, k) => {
@@ -32,7 +32,7 @@ export default function Predictions({ output }) {
   }))
   return (
     <>
-      <Title level={4}>This pup is most likely:</Title>
+      <Title level={4}>This pupper is most likely:</Title>
       {items.map((each, i) => (
         <div key={i}>
           <Text>
@@ -41,6 +41,7 @@ export default function Predictions({ output }) {
           <br />
         </div>
       ))}
+      <Button>identify another pupper</Button>
     </>
   )
 }
