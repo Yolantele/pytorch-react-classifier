@@ -46,14 +46,9 @@ const Classifier = () => {
       <Card>
         <DropImageCard setFile={setFile} canvasRef={canvas} fileLoaded={loaded} />
         <div style={{ marginTop: 20 }}>
-          {/* {!loaded && !isLoading && (
-            <Button type={'primary'} style={buttonStyle} onClick={startLoadModel}>
-              Load model
-            </Button>
-          )} */}
-          {!loaded && isLoading && <Spin />}
-          {loaded && data && !outputMap && <Text>Running model...</Text>}
-          {!!file && !data && <Text>Loading image...</Text>}
+          {!loaded && isLoading && <Spin tip='Loading Model...' />}
+          {loaded && data && !outputMap && <Spin tip='Running model..' />}
+          {!!file && !data && <Spin tip='Loading image..' />}
         </div>
       </Card>
       <Card>

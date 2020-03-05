@@ -2,7 +2,7 @@
 
 for those who would like to know what breed a pupper or doggo is, go to [Pupper Identiefier v.0.0.1](https://amazing-ramanujan-258157.netlify.com/)
 
-is a machine learning Classifier following [fastai state of the art image classification using fastai.vision](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb)
+is a machine learning Classifier following [image classification using fast.ai](https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-download.ipynb)
 
 Torch.onnx and onnx.js model export for React Front-End app
 
