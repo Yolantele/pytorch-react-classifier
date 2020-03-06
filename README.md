@@ -5,8 +5,11 @@ for those who would like to know what breed a pupper or doggo is, go to [Pupper 
 
 Features:
 
-- Deep Learning Model using fastai and pytorch
-- FE-only app
+- pyTorch model is converted and exported to JS readable format
+- Machine Learning Model is loaded and run only on the Browser
+- Privacy first App - no BE
+- Images are Processed and evaluations generatged only on the Front-end
+- No Python-based server or translator layer - only onnx model on React.js Front-end
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/31f7727c-c577-48ac-9632-2946018f1bcf/deploy-status)](https://app.netlify.com/sites/amazing-ramanujan-258157/deploys)
 
