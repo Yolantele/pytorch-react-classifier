@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Typography } from 'antd'
+import { Typography, Button } from 'antd'
 import Classifier from './Components/Classifier'
 
 const CONTENT_STYLE = {
@@ -18,6 +18,11 @@ const App = () => {
   return (
     <div style={CONTENT_STYLE}>
       <Classifier />
+      <Button
+        type={'link'}
+        onClick={() => window.open('https://medium.com/@klpdjolanta', '_blank')}>
+        by Jolanta J.
+      </Button>
     </div>
   )
 }

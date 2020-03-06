@@ -5,7 +5,7 @@ import { Card, Typography, Button } from 'antd'
 const { Title } = Typography
 const buttonStyle = { backgroundColor: 'hotpink', border: '2px solid hotpink' }
 
-const DropImageCard = ({ setFile, canvasRef, fileLoaded }) => {
+const LoadImage = ({ setFile, canvasRef, fileLoaded }) => {
   const onDrop = useCallback(
     acceptedFiles => {
       if (acceptedFiles.length > 1) {
@@ -43,4 +43,4 @@ const DropImageCard = ({ setFile, canvasRef, fileLoaded }) => {
   )
 }
 
-export default DropImageCard
+export default LoadImage

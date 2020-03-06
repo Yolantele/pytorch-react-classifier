@@ -1,12 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react'
 import Predictions from './Predictions'
-import DropImageCard from './DropImageCard'
+import LoadImage from './LoadImage'
 import { fetchImage, makeSession, loadModel, runModel } from './utils'
-import { Button, Typography, Card, Spin } from 'antd'
+import { Typography, Card, Spin } from 'antd'
 
 const { Text } = Typography
 const session = makeSession()
-const buttonStyle = { backgroundColor: 'hotpink', border: '2px solid hotpink' }
 const Classifier = () => {
   const [loaded, setLoaded] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -44,7 +43,7 @@ const Classifier = () => {
   return (
     <div>
       <Card>
-        <DropImageCard setFile={setFile} canvasRef={canvas} fileLoaded={loaded} />
+        <LoadImage setFile={setFile} canvasRef={canvas} fileLoaded={loaded} />
         <div style={{ marginTop: 20, textAlign: 'center' }}>
           {!loaded && isLoading && <Spin tip='Loading Model in just a sec...' />}
           {loaded && data && !outputMap && <Spin tip='Running model..' />}
