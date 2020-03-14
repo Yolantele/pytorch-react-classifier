@@ -15,3 +15,6 @@ Features:
 
 This app follows :
 fastai ML classifier build --> ML model export for Javascript FE using torch.onnx and onnx.js, --> React Antd FE --> Netlify CI/CD & Hosting
+
+
+references work done by [David Pfahler](https://github.com/davidpfahler/react-ml-app)
