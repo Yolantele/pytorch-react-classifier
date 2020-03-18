@@ -1,4 +1,5 @@
 export default [
+  'Kangaroo',
   'Afghan_hound',
   'African_hunting_dog',
   'Airedale',

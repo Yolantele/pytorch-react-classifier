@@ -20,7 +20,7 @@ const LoadImage = ({ setFile, canvasRef, fileLoaded }) => {
     },
     [setFile]
   )
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
+  const { getRootProps, getInputProps } = useDropzone({ onDrop })
 
   return (
     <Card

@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Typography, Button } from 'antd'
+import { Button } from 'antd'
 import Classifier from './Components/Classifier'
 
 const CONTENT_STYLE = {
@@ -11,8 +11,6 @@ const CONTENT_STYLE = {
   flexDirection: 'column',
   backgroundColor: 'lightgrey'
 }
-
-const { Title } = Typography
 
 const App = () => {
   return (

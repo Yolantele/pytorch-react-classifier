@@ -2,9 +2,8 @@ import React, { useRef, useEffect, useState } from 'react'
 import Predictions from './Predictions'
 import LoadImage from './LoadImage'
 import { fetchImage, makeSession, loadModel, runModel } from './utils'
-import { Typography, Card, Spin } from 'antd'
+import { Card, Spin } from 'antd'
 
-const { Text } = Typography
 const session = makeSession()
 const Classifier = () => {
   const [loaded, setLoaded] = useState(false)

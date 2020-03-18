@@ -2,6 +2,7 @@ import loadImage from 'blueimp-load-image'
 import { Tensor, InferenceSession } from 'onnxjs'
 import ndarray from 'ndarray'
 import resnet from '../dogs.onnx'
+// import resnet from '../teddy5.onnx'
 import ops from 'ndarray-ops'
 
 export const getBreed = className =>
@@ -66,6 +67,7 @@ const preprocess = input => {
 
   // data processing
   const dataTensor = ndarray(new Float32Array(data), [width, height, 4])
+
   const dataProcessedTensor = ndarray(new Float32Array(width * height * 3), [1, 3, width, height])
   ops.assign(dataProcessedTensor.pick(0, 0, null, null), dataTensor.pick(null, null, 0))
   ops.assign(dataProcessedTensor.pick(0, 1, null, null), dataTensor.pick(null, null, 1))

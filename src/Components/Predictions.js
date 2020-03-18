@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './classes'
 import { getBreedImg, getBreed } from './utils'
-import { Typography, Button } from 'antd'
+import { Typography } from 'antd'
 
 const { Text, Title } = Typography
 const getTopK = (acts, k) => {
